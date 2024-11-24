@@ -1,5 +1,5 @@
-aiogram
-environs
-aiogram_i18n
-fluent.runtime
-fluent_compiler
+aiogram=3.15.0
+environs=11.2.1
+fluent.runtime=0.4.0
+fluent_compiler=0.3
+fluentogram=1.1.8
