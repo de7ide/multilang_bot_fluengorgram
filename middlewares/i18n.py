@@ -10,7 +10,7 @@ from fluentogram import TranslatorHub
 
 logger = logging.getLogger(__name__)
 
-cdata = ['en']
+cdata: list[str] = ['en',]
 
 
 class TranslatorRunnerMiddleware(BaseMiddleware):
@@ -22,42 +22,19 @@ class TranslatorRunnerMiddleware(BaseMiddleware):
             data: Dict[str, Any]
     ) -> Any:
 
+
         def upload_clbk(callback):
             cdata.append(callback)
 
-        def return_clbck():
-            return "".join(cdata)[-1]
 
-
-        # state = data['state']
-        # data = state.get_data()
-
-        # s = data['raw_state']
-        # if s:
-        #     print(s.data)
-
-        # s  = data['state']
-        # print(event)
-        # async with self.storage() as stor:
-        #     data['stor'] = stor
-        #     print(data)
-        #     hub: TranslatorHub = data.get('_translator_hub') # type: ignore
-        #     data['i18n'] = hub.get_translator_by_locale(locale=None)
         dd = event.callback_query
         if dd:
             dd = dd.data
             upload_clbk(dd)
 
 
-        data['cdata'] = return_clbck()
+        data['cdata'] = cdata[-1]
         hub: TranslatorHub = data.get('_translator_hub') # type: ignore
-        data['i18n'] = hub.get_translator_by_locale(locale=dd)
+        data['i18n'] = hub.get_translator_by_locale(locale=data['cdata'])
         print(data)
         return await handler(event, data)
-
-
-
-        # hub: TranslatorHub = data.get('_translator_hub') # type: ignore
-        # data['i18n'] = hub.get_translator_by_locale(locale=None)
-
-        # return await handler(event, data)
