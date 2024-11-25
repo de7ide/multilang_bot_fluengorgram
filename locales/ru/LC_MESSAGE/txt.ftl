@@ -26,3 +26,4 @@ schema2 = https://telegra.ph/ZenoAI-11-06
 choose-action = Выберите действие...
 my-chanal2 = 📣Мой канал
 rev = t.me/+pVj4tdAxxAxkMTNi
+r

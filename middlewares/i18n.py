@@ -36,5 +36,4 @@ class TranslatorRunnerMiddleware(BaseMiddleware):
         data['cdata'] = cdata[-1]
         hub: TranslatorHub = data.get('_translator_hub') # type: ignore
         data['i18n'] = hub.get_translator_by_locale(locale=data['cdata'])
-        print(data)
         return await handler(event, data)

@@ -41,8 +41,6 @@ async def main():
     dp.include_router(user_router)
 
     dp.update.middleware(TranslatorRunnerMiddleware())
-    # user_router.callback_query.middleware(CallbackMiddleware())
-    # user_router.message.middleware(TranslatorRunnerMiddleware())
 
     await dp.start_polling(bot, _translator_hub=translator_hub)
 

@@ -26,3 +26,4 @@ schema2 = https://telegra.ph/%E0%A4%AD%E0%A4%97%E0%A4%AF-11-08
 choose-action = कार्रवाई चुनें...
 my-chanal2 = 📣मेरा चैनल
 rev = t.me/+66d42zOawb81YWNi
+r

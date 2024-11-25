@@ -2,13 +2,11 @@ import asyncio
 import random
 
 from aiogram import Router, F, Bot
-from aiogram.types import Message, CallbackQuery, FSInputFile, ReplyKeyboardRemove, User
+from aiogram.types import Message, CallbackQuery, FSInputFile, ReplyKeyboardRemove
 from aiogram.filters import CommandStart, StateFilter, Command
 from aiogram.fsm.context import FSMContext
-from aiogram.fsm.state import State, StatesGroup
 
 from fluentogram import TranslatorRunner
-from lexicon.lexicon import LEXICON_EN, LEXICON_RU, LEXICON_HINDI
 from kbds.reply import get_kbd
 from kbds.inline import get_inline_kbd
 from utils.state import ChooseScheme, ChooseScheme2
@@ -123,7 +121,6 @@ async def nakr2_ru(message: Message, state: FSMContext, i18n: TranslatorRunner):
 @user_router.message(ChooseScheme2.ai2_ru, F.text == '🔙पीछे')
 async def back_clear(state: FSMContext):
     await state.clear()
-
 
 
 #scheme but2

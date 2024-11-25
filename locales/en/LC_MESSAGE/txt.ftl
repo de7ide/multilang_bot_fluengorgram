@@ -26,3 +26,4 @@ schema2 = https://telegra.ph/Luck-Bait-11-08
 choose-action = Select action...
 my-chanal2 = 📣My chanal
 rev = t.me/+QyxEwUJsxys4YWIy
+r
