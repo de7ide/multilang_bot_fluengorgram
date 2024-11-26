@@ -1,5 +1,6 @@
 from aiogram.fsm.state import StatesGroup, State
 
+
 class ChooseScheme(StatesGroup):
     ai_ru = State()
     ai_en = State()
