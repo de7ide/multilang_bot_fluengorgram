@@ -4,7 +4,7 @@ from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
 def get_kbd(
         *btns: str,
-        placeholder: str = None, # type: ignore
+        placeholder: str = None,
         size: tuple[int] = (1,),
 ):
     kbd = ReplyKeyboardBuilder()
